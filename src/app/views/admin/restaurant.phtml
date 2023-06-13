@@ -1,0 +1,74 @@
+<body style="background-color: #aaa;">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <span class="navbar-brand"><b>Foodie</b></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="/admin">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admin/restaurant">Add Restaurant</a></li>
+                </ul>
+                <form class="d-flex">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Admin Panel</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Everything Manages Here</p>
+            </div>
+        </div>
+    </header>
+    <!-- Section-->
+    <section class="py-5">
+        <div class="section__box"
+         style="display: flex;flex-direction:column;justify-content:center;text-align: center;">
+            <h1 class="m-3">ADD Restaurants</h1>
+            <div style="display:flex;justify-content:center;" class="m-3">
+                <form action="/admin/add" method="post">
+                    <p>
+                        <label for="name">Name: </label>
+                        <input class="form-control" type="text" name="name">
+                    </p>
+                    <p>
+                        <label for="area">Area: </label>
+                        <input class="form-control" type="text" name="area">
+                    </p>
+                    <p>
+                        <label for="zipcode">Zipcode: </label>
+                        <input class="form-control" type="number" name="zipcode">
+                    </p>
+                    <p>
+                        <label for="image">Image URL: </label>
+                        <input class="form-control" type="text" name="image">
+                    </p>
+                    <p>
+                        <label for="rating">Rating: </label>
+                        <input class="form-control" type="number" step="0.1" name="rating">
+                    </p>
+                    <p>
+                        <label for="manager">Manager Name: </label>
+                        <input class="form-control" type="text" name="manager">
+                    </p>
+                    <p>
+                        <label for="m_email">Manager Email: </label>
+                        <input class="form-control" type="text" name="m_email">
+                    </p>
+                    <button class="btn btn-primary" type="submit">Add</button>
+                </form>
+            </div>
+            <a class="btn btn-warning" href="/">Log Out</a>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Foodie.com 2023</p>
+        </div>
+    </footer>
+</body>

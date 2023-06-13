@@ -1,0 +1,81 @@
+<body>
+    <header>
+        <!-- Intro settings -->
+        <style>
+            #intro {
+                /* Margin to fix overlapping fixed navbar */
+                margin-top: 58px;
+            }
+
+            @media (max-width: 991px) {
+                #intro {
+                    /* Margin to fix overlapping fixed navbar */
+                    margin-top: 45px;
+                }
+            }
+        </style>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container-fluid">
+                <!-- Navbar brand -->
+                <span class="navbar-brand">
+                    <b>Foodie</b>
+                </span>
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home/order" rel="nofollow">My Order</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav d-flex flex-row">
+                        <!-- Button -->
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link" href="/">
+                                <button class="bg-primary p-1">sign out</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="my-5">
+        <div class="container">
+            <!--Section: Content-->
+            <section class="text-center">
+                <h4 class="mb-5 p-4"><strong>Write Review</strong></h4>
+                <form action="/home/send?id=<?php echo $data ?>" method="post">
+                    <p>
+                        <label for="review">Review: </label>
+                        <textarea name="review" cols="30" rows="5"></textarea>
+                    </p>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </section>
+            <!--Section: Content-->
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="bg-light text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="">Foodie.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!--Footer-->
+</body>

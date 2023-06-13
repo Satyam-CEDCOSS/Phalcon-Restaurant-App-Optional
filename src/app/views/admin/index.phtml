@@ -1,0 +1,92 @@
+<body style="background-color: #aaa;">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <span class="navbar-brand"><b>Foodie</b></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="/admin">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admin/restaurant">Add Restaurant</a></li>
+                </ul>
+                <form class="d-flex">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Admin Panel</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Everything Manages Here</p>
+            </div>
+        </div>
+    </header>
+    <!-- Section-->
+    <section class="py-5">
+        <div class="section__box"
+         style="display: flex;flex-direction:column;justify-content:center;text-align: center;">
+            <h1 class="m-3">All Restaurants</h1>
+            <div style="display:flex;justify-content:center;" class="m-3">
+                <div class="row">
+                    <?php
+                    echo $data;
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="section__box"
+         style="display: flex;flex-direction:column;justify-content:center;text-align: center;">
+            <h1 class="m-3">All Users</h1>
+            <div style="display:flex;justify-content:center;" class="m-3">
+                <table class="table">
+                    <caption>User Table</caption>
+                    <thead>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Type</th>
+                    </thead>
+                    <tbody>
+                        <?php
+                        echo $user
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="section__box"
+         style="display: flex;flex-direction:column;justify-content:center;text-align: center;">
+            <h1 class="m-3">All Reviews</h1>
+            <div style="display:flex;justify-content:center;" class="m-3">
+                <table class="table">
+                    <caption>Review Table</caption>
+                    <thead>
+                        <th>User ID</th>
+                        <th>Restaurant ID</th>
+                        <th>Food Name</th>
+                        <th>Review</th>
+                    </thead>
+                    <tbody>
+                        <?php
+                        echo $review
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+            <a class="btn btn-warning" href="/">Log Out</a>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Foodie.com 2023</p>
+        </div>
+    </footer>
+</body>
